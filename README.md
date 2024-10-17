@@ -1,7 +1,7 @@
 # TAADA
 Two-Branch Attention Adversarial Domain Adaptation Network for Hyperspectral Image Classification
 
-Paper web page: [Two-Branch Attention Adversarial Domain Adaptation Network for Hyperspectral Image Classification]([https://ieeexplore.ieee.org/document/9924236]).
+Paper web page: [Two-Branch Attention Adversarial Domain Adaptation Network for Hyperspectral Image Classification]([(https://ieeexplore.ieee.org/document/9924236]).
 
 <p align='center'>
   <img src='figure/TAADA.png' width="800px">

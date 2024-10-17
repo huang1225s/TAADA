@@ -8,11 +8,11 @@ from utils_HSI import sample_gt, metrics
 from datasets import get_dataset, HyperX
 import torch.utils.data as data
 import scipy.io as io
-from HybridSN import SSSE
+from net import SSSE
 from loss_helper import *
 
 # Training settings
-parser = argparse.ArgumentParser(description='Visda Classification')
+parser = argparse.ArgumentParser(description='TAADA')
 parser.add_argument('--batch-size', type=int, default=128, metavar='N',
                     help='input batch size for training (default: 64)')
 parser.add_argument('--num_epoch', type=int, default=100, metavar='N',

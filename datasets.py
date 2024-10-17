@@ -59,30 +59,6 @@ DATASETS_CONFIG = {
             'img': 'Houston18.mat',
             'gt': 'Houston18_7gt.mat',
             },
-        'YCZY': {
-            'img': 'YC_ZY1_02D_data.mat.mat',
-            'gt': 'YC_ZY1_02D_gt.mat',
-            },
-        'YCGF': {
-            'img': 'YC_GF5_data.mat.mat',
-            'gt': 'YC_GF5_gt.mat',
-            },
-        'YCZY9': {
-            'img': 'YC_ZY1_02D_data.mat.mat',
-            'gt': 'YC_ZY9_gt.mat',
-            },
-        'HHK': {
-            'img': 'HHK_ZY_data.mat.mat',
-            'gt': 'HHK_ZY_gt.mat',
-            },
-        'YCZY8': {
-            'img': 'YC_ZY1_02D_data.mat.mat',
-            'gt': 'YC_ZY_qj8_gt.mat',
-            },
-        'HHK8': {
-            'img': 'HHK_ZY_data.mat.mat',
-            'gt': 'HHK_ZY_qj8_gt.mat',
-            },
         'Shanghai': {
             'img': 'Shanghai.mat',
             'gt': 'Shanghai_gt.mat',
@@ -181,80 +157,6 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
 
         label_values = ["Undefined", "Asphalt", "Meadows", "Trees", "Bare Soil", "Bitumen",
                         "Self-Blocking Bricks", "Shadows"]
-
-        ignored_labels = [0]
-
-    elif dataset_name == 'YCZY':
-        # Load the image
-        img = open_file(folder + 'ZY_YC_147_data.mat')['Data1']
-
-        rgb_bands = (55, 41, 12)
-
-        gt = open_file(folder + 'YC_ZY1_02D_gt.mat')['DataClass']
-
-        label_values = ["Undefined", "1", " 3 ", "5", "6", "7",
-                        "9", "13"]
-
-        ignored_labels = [0]
-
-    elif dataset_name == 'YCGF':
-        # Load the image
-        img = open_file(folder + 'YC_GF5_data.mat')['Data2']
-
-        rgb_bands = (55, 41, 12)
-
-        gt = open_file(folder + 'YC_GF5_gt.mat')['DataClass']
-
-        label_values = ["Undefined", "14", " 11 ", "13", "9", "15",
-                        "1", "2"]
-
-        ignored_labels = [0]
-    elif dataset_name == 'YCZY9':
-        # Load the image
-        img = open_file(folder + 'YC_ZY1_02D_data.mat')['X_YC'][:, :, :96]
-
-        rgb_bands = (55, 41, 12)
-
-        gt = open_file(folder + 'YC_ZY_8luo_gt.mat')['DataClass']
-
-        label_values = ["Undefined", "1", " 2 ", "3", "6", "7",
-                        "9", "11", " 12 ", "15"]
-        # 建筑,河流,裸地,水田,闲置耕地,鱼塘,海洋,盐池,互花米草
-        ignored_labels = [0]
-    elif dataset_name == 'HHK':
-        # Load the image
-        img = open_file(folder + 'HHK_ZY_data.mat')['X_HHK'][:, :, :96]
-
-        rgb_bands = (55, 41, 12)
-
-        gt = open_file(folder + 'HHK_quluo8_gt.mat')['DataClass3']
-
-        label_values = ["Undefined", "18", " 8 ", "9", "20", "13",
-                        "10", "7 3 4", " 1 ", "2"]
-        # 建筑,河流,裸地,水田,闲置耕地,鱼塘,海洋,san盐田,互花米草
-        ignored_labels = [0]
-    elif dataset_name == 'YCZY8':
-        # Load the image
-        img = open_file(folder + 'YC_ZY1_02D_data.mat')['X_YC'][:, :, :96]
-
-        rgb_bands = (55, 41, 12)
-
-        gt = open_file(folder + 'YC_ZY_qj8_gt.mat')['DataClass']
-
-        label_values = ["Undefined", "1", " 2 ", "3", "6", "7",
-                        "9", "11", " 12 ", "15"]
-
-        ignored_labels = [0]
-    elif dataset_name == 'HHK8':
-        # Load the image
-        img = open_file(folder + 'HHK_ZY_data.mat')['X_HHK'][:, :, :96]
-
-        rgb_bands = (55, 41, 12)
-
-        gt = open_file(folder + 'ZY_HHK_qj8_gt.mat')['DataClass3']
-
-        label_values = ["Undefined", "18", " 8 ", "9", "20", "13",
-                        "10", "7 3 4", " 1 ", "2"]
 
         ignored_labels = [0]
 

@@ -235,7 +235,7 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
         ignored_labels = [0]
     elif dataset_name == 'Shanghai':
         # Load the image
-        img = open_file(folder + 'Shanghai.mat')['ori_data'][:, :, :192]
+        img = open_file(folder + 'Shanghai.mat')['ori_data']
 
         rgb_bands = (43, 21, 11)
 
@@ -246,7 +246,7 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
         ignored_labels = [0]
     elif dataset_name == 'Hangzhou':
         # Load the image
-        img = open_file(folder + 'Hangzhou.mat')['ori_data'][:, :, :192]
+        img = open_file(folder + 'Hangzhou.mat')['ori_data']
 
         rgb_bands = (43, 21, 11)
 

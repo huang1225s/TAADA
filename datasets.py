@@ -137,7 +137,7 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
 
     if dataset_name == 'PaviaC':
         # Load the image
-        img = open_file(folder + 'Pavia.mat')['pavia'][:, :, :96]
+        img = open_file(folder + 'Pavia.mat')['pavia']
 
         rgb_bands = (55, 41, 12)
 
@@ -149,7 +149,7 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
 
     elif dataset_name == 'PaviaU':
         # Load the image
-        img = open_file(folder + 'PaviaU.mat')['paviaU'][:, :, :96]
+        img = open_file(folder + 'PaviaU.mat')['paviaU']
 
         rgb_bands = (55, 41, 12)
 
@@ -257,7 +257,7 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
         ignored_labels = [0]
     elif dataset_name == 'Dioni':
         # Load the image
-        img = open_file(folder + 'Dioni.mat')['ori_data'][:, :, :144]
+        img = open_file(folder + 'Dioni.mat')['ori_data']
 
         rgb_bands = (43, 21, 11)
 
@@ -272,7 +272,7 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
         ignored_labels = [0]
     elif dataset_name == 'Loukia':
         # Load the image
-        img = open_file(folder + 'Loukia.mat')['ori_data'][:, :, :144]
+        img = open_file(folder + 'Loukia.mat')['ori_data']
 
         rgb_bands = (43, 21, 11)
 

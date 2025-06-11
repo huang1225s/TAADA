@@ -632,7 +632,7 @@ class ResClassifier(nn.Module):
         #fc5_emb = self.fc5(fc4_emb)
         #if self.training:
         #    fc5_emb.mul_(math.sqrt(1 - self.dropout_p))
-        logit = self.fc11(fc1_emb)
+        logit = self.fc11(fc4_emb)
 
         if self.extract:
             return fc1_emb, logit

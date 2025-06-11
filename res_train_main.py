@@ -40,7 +40,7 @@ parser.add_argument('--patch_size', type=int, default=7,
                          "absent will be set by the model)")
 parser.add_argument('--training_sample', type=int, default=0.8,
                     help="The proportion of training source domain samples")
-parser.add_argument('--training_tar_sample', type=int, default=0.3,
+parser.add_argument('--training_tar_sample', type=int, default=0.5,
                     help="The proportion of training target domain samples(no labels)")
 parser.add_argument('--large_num', type=int, default=3,
                     help="The data augmentation factor")

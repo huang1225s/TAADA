@@ -65,9 +65,6 @@ lr = args.lr
 num_k = args.num_k
 large_num = args.large_num
 use_gpu = torch.cuda.is_available()
-torch.manual_seed(args.seed)
-if args.cuda:
-    torch.cuda.manual_seed(args.seed)
 
 if __name__ == '__main__':
 
@@ -75,6 +72,9 @@ if __name__ == '__main__':
     acc_test_list2 = np.zeros([args.num_trials, args.num_trials])
 
 for fla in range(args.num_trials):
+    torch.manual_seed(args.seed)
+    if args.cuda:
+        torch.cuda.manual_seed(args.seed)
     best_acc1 = 0
     best_acc2 = 0
     FLAG = 1

@@ -8,7 +8,6 @@ import torch.nn as nn
 from torch.autograd import Function
 from torch.autograd import Variable
 import torch.nn.init as init
-import HybridSN
 #from resnet200 import Res200
 #from resnext import ResNeXt
 from torch.nn.utils.weight_norm import WeightNorm

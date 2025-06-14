@@ -617,21 +617,21 @@ class ResClassifier(nn.Module):
 
     def forward(self, x):
         fc1_emb = self.fc1(x)
-        if self.training:
-            fc1_emb.mul_(math.sqrt(1 - self.dropout_p))
-        fc2_emb = self.fc2(fc1_emb)
-        if self.training:
-            fc2_emb.mul_(math.sqrt(1 - self.dropout_p))
-        fc3_emb = self.fc3(fc2_emb)
-        if self.training:
-            fc3_emb.mul_(math.sqrt(1 - self.dropout_p))
-        fc4_emb = self.fc4(fc3_emb)
+        # if self.training:
+            # fc1_emb.mul_(math.sqrt(1 - self.dropout_p))
+        # fc2_emb = self.fc2(fc1_emb)
+        # if self.training:
+        #     fc2_emb.mul_(math.sqrt(1 - self.dropout_p))
+        # fc3_emb = self.fc3(fc2_emb)
+        # if self.training:
+        #     fc3_emb.mul_(math.sqrt(1 - self.dropout_p))
+        # fc4_emb = self.fc4(fc3_emb)
         #if self.training:
         #    fc4_emb.mul_(math.sqrt(1 - self.dropout_p))
         #fc5_emb = self.fc5(fc4_emb)
         #if self.training:
         #    fc5_emb.mul_(math.sqrt(1 - self.dropout_p))
-        logit = self.fc11(fc4_emb)
+        logit = self.fc11(fc1_emb)
 
         if self.extract:
             return fc1_emb, logit

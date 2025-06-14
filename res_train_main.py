@@ -183,7 +183,7 @@ for fla in range(args.num_trials):
         F1.cuda()
         F2.cuda()
     if args.optimizer == 'momentum':
-        optimizer_g = optim.SGD(list(G.parameters()), lr=args.lr, weight_decay=0.0005)
+        optimizer_g = optim.SGD(list(G.parameters()), momentum=0.9, lr=args.lr, weight_decay=0.0005)
         optimizer_f = optim.SGD(list(F1.parameters()) + list(F2.parameters()), momentum=0.9, lr=args.lr,
                                 weight_decay=0.0005)
     elif args.optimizer == 'adam':
